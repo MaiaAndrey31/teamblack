@@ -9,7 +9,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     '& .MuiTextField-root': {
       margin: theme.spacing(1),
-      width: '25ch',
+      width: '40ch',
     },
   },
 }));
@@ -53,7 +53,7 @@ export default function NewUserForm() {
     defaultValue="2017-05-24"
     className={classes.textField}
     InputLabelProps={{
-      shrink: true,
+      shrink: true, 
     }}
   /><br/>
          <TextField

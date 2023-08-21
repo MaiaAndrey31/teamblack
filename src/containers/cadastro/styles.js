@@ -20,7 +20,9 @@ text-shadow:  0  1px  1px  rgba(0, 0, 0,0.5);
 }
 form{
     width: 100%;
-    height: auto;
+  
+    padding: 10px;
+   
 }
 
 

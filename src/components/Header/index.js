@@ -1,5 +1,5 @@
 import React from "react";
-import { Container, Content, Nav, SideBar } from "./styles";
+import { Container, Content, Nav, SideBar, LinkHome } from "./styles";
 import { Outlet } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
@@ -23,6 +23,9 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
+  content: {
+    color: 'white'
+  }
 }));
 
 
@@ -36,6 +39,7 @@ function Header() {
       <SideBar>
         <h2>Team Black</h2>
         <div className={classes.root}>
+        <LinkHome><a href={"/"}>Home</a></LinkHome>
       <Accordion className={classes.backcolor}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
@@ -46,7 +50,11 @@ function Header() {
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            
+            <ul>
+              <a href={"/students"} className={classes.content}>
+                Cadastrar Aluno
+              </a>
+            </ul>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -74,6 +82,7 @@ function Header() {
           <Typography className={classes.heading}>Planos</Typography>
         </AccordionSummary>
       </Accordion>
+      
     </div>
 
       </SideBar>

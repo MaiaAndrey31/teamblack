@@ -58,7 +58,7 @@ export default function NewUserForm() {
             id="outlined-textarea"
             className={classes.fullLarge}
             label="Nome Completo"
-            type="Name"
+            type="Text"
             placeholder=""
             fullWidth
             variant="outlined"
@@ -85,15 +85,14 @@ export default function NewUserForm() {
             className={classes.textField}
             id="outlined-textarea"
             label="Email"
-            type="email"
-            
+            type="email"            
             placeholder=""
             multiline
             variant="outlined"
           />
           <TextField
             id="date"
-            label="Birthday"
+            label="Data de Nascimento"
             type="date"
             defaultValue="XX-XX-XXXX"
             className={classes.textField}
@@ -108,30 +107,28 @@ export default function NewUserForm() {
           id="demo-simple-select-outlined"
           value={gender}
           onChange={handleChange}
-          label="Age"
+          label="Gênero"
         >
-          <MenuItem value="">
-            <em>Masculino</em>
-          </MenuItem>
+          <MenuItem value={10}>Masculino</MenuItem>
           <MenuItem value={10}>Feminino</MenuItem>
           <MenuItem value={20}>Outro</MenuItem>
           <MenuItem value={30}>Prefere não dizer</MenuItem>
+          
         </Select>
       </FormControl>
           
           <TextField
-            label="None"
+            label="Telefone fixo"
             id="outlined-margin-none"
-            defaultValue="Default Value"
-            className={classes.textField}
-           
+            
+            className={classes.textField}           
             variant="outlined"
           />
         
           <TextField
-            label="Dense"
+            label="Celular"
             id="outlined-margin-dense"
-            defaultValue="Default Value"
+          
             className={classes.textField}
             variant="outlined"
           />

@@ -10,11 +10,16 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+   
     width: '100%',
     
    
   },
+  backcolor:{
+    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+  },
   heading: {
+   
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
@@ -31,7 +36,7 @@ function Header() {
       <SideBar>
         <h2>Team Black</h2>
         <div className={classes.root}>
-      <Accordion>
+      <Accordion className={classes.backcolor}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
@@ -45,13 +50,13 @@ function Header() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion>
+      <Accordion className={classes.backcolor}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
         >
-          <Typography className={classes.heading}></Typography>
+          <Typography className={classes.heading}>Financeiro</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
@@ -60,13 +65,13 @@ function Header() {
           </Typography>
         </AccordionDetails>
       </Accordion>
-      <Accordion disabled>
+      <Accordion className={classes.backcolor}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"
           id="panel3a-header"
         >
-          <Typography className={classes.heading}>Disabled Accordion</Typography>
+          <Typography className={classes.heading}>Planos</Typography>
         </AccordionSummary>
       </Accordion>
     </div>

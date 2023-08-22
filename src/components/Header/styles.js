@@ -44,10 +44,10 @@ h2{
 }
 p{
     color: #ebebeb;
-    padding: 25px;
+   
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     font-weight: 900;
-    border-bottom: 1px solid #000000;
+   
 
 }
 

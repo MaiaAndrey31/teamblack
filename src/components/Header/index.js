@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme) => ({
    
   },
   backcolor:{
-    backgroundColor: 'rgba(0, 0, 0, 0.7)',
+    backgroundColor: 'rgba(66, 66, 66, 0.7)',
   },
   heading: {
    

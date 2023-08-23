@@ -1,15 +1,14 @@
 import React from 'react'
-import { Container } from '../../components/Header/styles'
-
+import { Container, Image } from './styles'
+import Logo from '../../Assets/logo.jpg'
 function Home(){
 
 
     return (
 
         <Container>
-        <h1>
-            Home
-        </h1>
+        <Image src={Logo}/>
+          
         </Container>
     )
 }

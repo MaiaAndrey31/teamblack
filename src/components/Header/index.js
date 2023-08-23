@@ -1,12 +1,26 @@
 import React from "react";
-import { Container, Content, Nav, SideBar, LinkHome } from "./styles";
+import { Container, Content, Nav, SideBar, LinkHome, Image, CollapseItems } from "./styles";
 import { Outlet } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
+import SvgIcon from '@material-ui/core/SvgIcon';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+import PersonLogo from '../../Assets/persona.png'
+import MoneyLogo from '../../Assets/renda.png'
+import PlanLogo from '../../Assets/planos.png'
+import Divider from '@material-ui/core/Divider'
+
+function HomeIcon(props) {
+  return (
+    <SvgIcon {...props}>
+      <path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z" />
+    </SvgIcon>
+  );
+}
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -24,8 +38,11 @@ const useStyles = makeStyles((theme) => ({
     fontWeight: theme.typography.fontWeightRegular,
   },
   content: {
-    color: 'white'
-  }
+    color: 'white',
+    fontSize: theme.typography.pxToRem(15),
+    fontWeight: theme.typography.fontWeightRegular,
+  },
+
 }));
 
 
@@ -39,22 +56,31 @@ function Header() {
       <SideBar>
         <h2>Team Black</h2>
         <div className={classes.root}>
-        <LinkHome><a href={"/"}>Home</a></LinkHome>
+        <LinkHome>
+        <a href={"/"}>
+        
+        <HomeIcon />
+        <li>Home</li></a></LinkHome>
+    
       <Accordion className={classes.backcolor}>
         <AccordionSummary
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel1a-content"
           id="panel1a-header"
-        >
+        > <Image src={PersonLogo} />
           <Typography className={classes.heading}>Alunos</Typography>
         </AccordionSummary>
         <AccordionDetails>
           <Typography>
-            <ul>
-              <a href={"/students"} className={classes.content}>
+            <CollapseItems>
+            <a href={"/students"} className={classes.content}>
+                Alunos
+              </a><br/><Divider className={classes.root}/>
+              <a href={"/students/new"} className={classes.content}>
                 Cadastrar Aluno
               </a>
-            </ul>
+
+            </CollapseItems>
           </Typography>
         </AccordionDetails>
       </Accordion>
@@ -63,7 +89,7 @@ function Header() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel2a-content"
           id="panel2a-header"
-        >
+        > <Image src={MoneyLogo}/>
           <Typography className={classes.heading}>Financeiro</Typography>
         </AccordionSummary>
         <AccordionDetails>
@@ -78,7 +104,7 @@ function Header() {
           expandIcon={<ExpandMoreIcon />}
           aria-controls="panel3a-content"
           id="panel3a-header"
-        >
+        ><Image src={PlanLogo} />
           <Typography className={classes.heading}>Planos</Typography>
         </AccordionSummary>
       </Accordion>

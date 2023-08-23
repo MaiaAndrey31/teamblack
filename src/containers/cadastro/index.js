@@ -8,6 +8,7 @@ import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import Divider from '@material-ui/core/Divider'
 
 
   
@@ -24,7 +25,7 @@ const useStyles = makeStyles((theme) => ({
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
 
-    width: "25ch",
+    width: "30ch",
   },
   fullLarge: {
     marginTop: theme.spacing(1),
@@ -37,7 +38,12 @@ const useStyles = makeStyles((theme) => ({
     marginRight: -800,
    
     padding: 15
-  }
+  },
+  divider: {
+    width: '100%',
+  
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
+  },
 }));
 
 export default function NewUserForm() {
@@ -51,20 +57,20 @@ export default function NewUserForm() {
   return (
     <Container>
       <h3>Cadastrar aluno</h3>
-
+      <Divider className={classes.divider} />
       <form className={classes.root} noValidate autoComplete="off">
         <div>
           <TextField
             id="outlined-textarea"
-            className={classes.fullLarge}
+            className={classes.textField}
             label="Nome Completo"
             type="Text"
             placeholder=""
-            fullWidth
+            multiline
             variant="outlined"
           />
           <TextField
-            className={classes.fullLarge}
+            className={classes.textField}
             id="outlined-textarea"
             type= "adress"
             label="Endereço"

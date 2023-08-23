@@ -9,14 +9,12 @@ margin: 0 auto;
 min-height: 95%;
 width: 95%;
 background-color:#FFFFFF;
-border-radius: 10px;
-border: outset 1px rgba(0, 0, 0, 0.6);
-box-shadow:  1px 1px  1px  1px  rgba(0, 0, 0,0.5);
+border-radius: 20px;
 h3{
     color: rgba(0, 0, 0, 0.5);
 padding-top: 15px;
 padding-bottom: 5px;
-text-shadow:  2px  2px  6px #808080;
+
 
 
 

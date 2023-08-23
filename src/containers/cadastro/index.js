@@ -40,7 +40,7 @@ const useStyles = makeStyles((theme) => ({
     padding: 15
   },
   divider: {
-    width: '100%',
+    width: '96.5%',
   
     backgroundColor: "rgba(0, 0, 0, 0.6)",
   },

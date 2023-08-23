@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const Container = styled.div`
   display: grid;
-  gap: 5px;
   grid-template-columns: 17% 83%;
   grid-template-rows: 10% 90%;
   grid-template-areas:
@@ -12,33 +11,32 @@ export const Container = styled.div`
 
 export const Nav = styled.div`
   grid-area: Nav;
-  border-radius: 10px;
-  height: 6vh;
+  height: 7vh;
   display: flex;
   align-items: center;
   flex-direction: row-reverse;
-  margin-top: 5px;
-  margin-right: 10px;
+  margin-left: -30px;
+
+  margin-right: 1px;
 
   background-color: #ff7f50;
-  box-shadow: inset 1px 1px 10px 1px rgba(0, 0, 0, 0.4);
   h1 {
     margin: 15px;
   }
 `;
 export const SideBar = styled.div`
   display: flex;
-  border-radius: 10px;
   flex-direction: column;
   align-items: center;
   background-color: #404040;
   grid-area: Sidebar;
-  margin-top: 5px;
-  height: 98vh;
+  height: 100vh;
   box-shadow: 0px 5px 5px 6px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 15px 15px 0px;
+  z-index: 2;
   h2 {
     color: #ebebeb;
-    padding: 25px;
+    padding: 2px;
     text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
     font-weight: 900;
     border-bottom: 1px solid #000000;
@@ -52,52 +50,57 @@ export const SideBar = styled.div`
 `;
 
 export const Image = styled.img`
-  color: white;
-  width: 35px;
-  padding-right: 15px;
-`;
+color: white;
+width: 35px;
+padding-right: 15px;
+`
 
 export const Content = styled.div`
   min-height: auto;
 `;
 
 export const LinkHome = styled.h6`
-  width: 100%;
-  font-size: 20px;
-  display: flex;
+width: 100%;
+font-size: 20px;
+display: flex;
 
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-  height: 50px;
+justify-content: center;
+align-items: center;
+gap: 1rem;
+height: 50px;
   background-color: rgb(66, 66, 66);
-  li {
+   li{
+    
     list-style: none;
-  }
-  a {
+   }
+   a{
     display: flex;
     gap: 15px;
     text-decoration: none;
     color: #ebebeb;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-    font-weight: 900;
-    cursor: pointer;
-    justify-content: center;
-    align-items: center;
-  }
-`;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+  cursor: pointer;
+  justify-content: center;
+align-items: center;
+   }
+`
 export const CollapseItems = styled.ul`
-  a {
+
+  a{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap: 8px;
     padding: 5px;
     text-decoration: none;
     color: #ebebeb;
-    text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
-    font-weight: 900;
-    cursor: pointer;
+  text-shadow: 2px 2px 0 rgba(0, 0, 0, 0.5);
+  font-weight: 900;
+  cursor: pointer;
   }
-  li {
+  li{
     list-style: none;
   }
+
+  
 `;

@@ -18,17 +18,19 @@ const useStyles = makeStyles((theme) => ({
   root: {
     display: "flex",
     flexWrap: "wrap",
-    justifyContent: "space-around",
+    justifyContent: "space-between",
   },
   textField: {
-    marginLeft: theme.spacing(1),
+    marginLeft: theme.spacing(2),
     marginRight: theme.spacing(1),
     marginTop: theme.spacing(1),
 
-    width: "30ch",
+    width: "25ch",
   },
-  fullLarge: {
+  small: {
+    marginLeft: theme.spacing(2),
     marginTop: theme.spacing(1),
+    width: '20ch',
   },
   formControl: {
     margin: theme.spacing(1),
@@ -73,27 +75,9 @@ export default function NewUserForm() {
             className={classes.textField}
             id="outlined-textarea"
             type= "adress"
-            label="Endereço"
+            label="Apelido"
             placeholder=""
             fullWidth
-            variant="outlined"
-          />
-
-          <TextField
-            className={classes.textField}
-            id="outlined-textarea"
-            label="Complemento"
-            placeholder=""
-            multiline
-            variant="outlined"
-          />
-          <TextField
-            className={classes.textField}
-            id="outlined-textarea"
-            label="Email"
-            type="email"            
-            placeholder=""
-            multiline
             variant="outlined"
           />
           <TextField
@@ -122,6 +106,19 @@ export default function NewUserForm() {
           
         </Select>
       </FormControl>
+
+          
+          <TextField
+            className={classes.textField}
+            id="outlined-textarea"
+            label="Email"
+            type="email"            
+            placeholder=""
+            multiline
+            variant="outlined"
+          />
+          
+          
           
           <TextField
             label="Telefone fixo"
@@ -136,6 +133,38 @@ export default function NewUserForm() {
             id="outlined-margin-dense"
           
             className={classes.textField}
+            variant="outlined"
+          /><br/>
+          <TextField
+            className={classes.textField}
+            id="outlined-textarea"
+            label="Cep"
+            placeholder=""
+            multiline
+            variant="outlined"
+          />
+          <TextField
+            className={classes.textField}
+            id="outlined-textarea"
+            label="Endereço"
+            placeholder=""
+            multiline
+            variant="outlined"
+          />
+          <TextField
+            className={classes.small}
+            id="outlined-textarea"
+            label="Nº"
+            placeholder=""
+            multiline
+            variant="outlined"
+          />
+          <TextField
+            className={classes.textField}
+            id="outlined-textarea"
+            label="Complemento"
+            placeholder=""
+            multiline
             variant="outlined"
           />
         </div>

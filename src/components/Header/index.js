@@ -11,6 +11,8 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import PersonLogo from '../../Assets/persona.png'
 import MoneyLogo from '../../Assets/renda.png'
 import PlanLogo from '../../Assets/planos.png'
+import NewLogo from '../../Assets/mais.png'
+import ListLogo from '../../Assets/lista.png'
 import Divider from '@material-ui/core/Divider'
 
 function HomeIcon(props) {
@@ -74,11 +76,13 @@ function Header() {
           <Typography>
             <CollapseItems>
             <a href={"/students"} className={classes.content}>
-                Alunos
-              </a><br/><Divider className={classes.root}/>
+            <Image src={ListLogo}/>Alunos 
+              </a><br/>
+              <Divider className={classes.root}/>
+              
               <a href={"/students/new"} className={classes.content}>
-                Cadastrar Aluno
-              </a>
+              <Image src={NewLogo}/>Novo Aluno 
+              </a> 
 
             </CollapseItems>
           </Typography>

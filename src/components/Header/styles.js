@@ -13,16 +13,12 @@ export const Nav = styled.div`
   grid-area: Nav;
   height: 7vh;
   display: flex;
-  align-items: center;
+  align-items: center;  
   flex-direction: row-reverse;
   margin-left: -30px;
-
   margin-right: 1px;
-
   background-color: #ff7f50;
-  h1 {
-    margin: 15px;
-  }
+ 
 `;
 export const SideBar = styled.div`
   display: flex;

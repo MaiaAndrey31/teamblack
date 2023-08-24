@@ -4,6 +4,8 @@ import { Outlet } from 'react-router-dom'
 import { makeStyles } from '@material-ui/core/styles';
 import Accordion from '@material-ui/core/Accordion';
 import SvgIcon from '@material-ui/core/SvgIcon';
+import AccountCircleRoundedIcon from '@material-ui/icons/AccountCircleRounded';
+import EmailRoundedIcon from '@material-ui/icons/EmailRounded';
 import AccordionSummary from '@material-ui/core/AccordionSummary';
 import AccordionDetails from '@material-ui/core/AccordionDetails';
 import Typography from '@material-ui/core/Typography';
@@ -13,7 +15,9 @@ import MoneyLogo from '../../Assets/renda.png'
 import PlanLogo from '../../Assets/planos.png'
 import NewLogo from '../../Assets/mais.png'
 import ListLogo from '../../Assets/lista.png'
+import ExitToAppRoundedIcon from '@material-ui/icons/ExitToAppRounded';
 import Divider from '@material-ui/core/Divider'
+
 
 function HomeIcon(props) {
   return (
@@ -44,6 +48,15 @@ const useStyles = makeStyles((theme) => ({
     fontSize: theme.typography.pxToRem(15),
     fontWeight: theme.typography.fontWeightRegular,
   },
+  divider: {
+    backgroundColor: "rgba(0, 0, 0, 0.6)",
+    marginLeft: "10px",
+    marginRight: "10px",
+  },
+  icon: {
+    marginRight: "10px",
+    marginLeft: "10px",
+  }
 
 }));
 
@@ -53,7 +66,11 @@ function Header() {
   return (
     <Container>
       <Nav>
-        <h1>Layout</h1>
+        <ExitToAppRoundedIcon className={classes.icon} fontSize="medium"/>
+        <Divider className={classes.divider} orientation="vertical" flexItem />
+      <AccountCircleRoundedIcon className={classes.icon} fontSize="medium"/>
+      <Divider className={classes.divider} orientation="vertical" flexItem />
+      <EmailRoundedIcon className={classes.icon} fontSize="medium"/>
       </Nav>
       <SideBar>
         <h2>Team Black</h2>

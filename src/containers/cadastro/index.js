@@ -1,15 +1,15 @@
 import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles, ThemeProvider, createTheme } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
-import { Container } from "./styles";
-import SaveIcon from "@material-ui/icons/Save";
+import { Container, Footer } from "./styles";
 import Button from "@material-ui/core/Button";
 import InputLabel from '@material-ui/core/InputLabel';
 import MenuItem from '@material-ui/core/MenuItem';
 import FormControl from '@material-ui/core/FormControl';
 import Select from '@material-ui/core/Select';
+import { green } from '@material-ui/core/colors'
 import Divider from '@material-ui/core/Divider'
-
+import DoneRoundedIcon from '@material-ui/icons/DoneRounded';
 
   
   
@@ -21,25 +21,29 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "space-between",
   },
   textField: {
-    marginLeft: theme.spacing(2),
-    marginRight: theme.spacing(1),
-    marginTop: theme.spacing(1),
+    marginLeft: theme.spacing(3),
+    marginRight: theme.spacing(3),
+    marginTop: theme.spacing(5),
 
     width: "25ch",
   },
   small: {
-    marginLeft: theme.spacing(2),
-    marginTop: theme.spacing(1),
+    marginLeft: theme.spacing(3),
+    marginTop: theme.spacing(5),
     width: '20ch',
   },
   formControl: {
-    margin: theme.spacing(1),
+    marginTop: theme.spacing(5),
     minWidth: "25ch",
   },
   buttonStyle: {
-    marginRight: -800,
+    display: 'flex',
+    fontWeight: 'bold',
+    marginBottom: 20,
+    
+    maxHeight: 50,
    
-    padding: 15
+    
   },
   divider: {
     width: '96.5%',
@@ -47,6 +51,11 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: "rgba(0, 0, 0, 0.6)",
   },
 }));
+
+const theme = createTheme({
+  palette: {
+    primary: green,
+  },})
 
 export default function NewUserForm() {
   const classes = useStyles();
@@ -100,7 +109,7 @@ export default function NewUserForm() {
           label="Gênero"
         >
           <MenuItem value={10}>Masculino</MenuItem>
-          <MenuItem value={10}>Feminino</MenuItem>
+          <MenuItem value={40}>Feminino</MenuItem>
           <MenuItem value={20}>Outro</MenuItem>
           <MenuItem value={30}>Prefere não dizer</MenuItem>
           
@@ -169,16 +178,20 @@ export default function NewUserForm() {
           />
         </div>
       </form>
+      <Footer>
+      <ThemeProvider theme={theme}>
       <Button
       
         variant="contained"
         color="primary"
-        size="large"
+        size="small"
         className={classes.buttonStyle}
-        startIcon={<SaveIcon />}
+        startIcon={<DoneRoundedIcon/>}
       >
         Salvar Cadastro
       </Button>
+      </ThemeProvider>
+      </Footer>
     </Container>
   );
 }
